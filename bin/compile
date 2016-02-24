@@ -1,0 +1,9 @@
+
+git clone https://github.com/Kitware/CMake.git
+cd CMake && ./configure && make
+export PATH=$PATH:/app/CMake/bin
+cd ..
+
+git clone https://github.com/lloyd/yajl.git
+cd yajl && ./configure && make
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/app/yajl/build/lib
