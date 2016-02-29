@@ -6,7 +6,8 @@ CACHE_DIR=$2
 
 git clone https://github.com/Kitware/CMake.git
 cd CMake && ./configure && make
-#export PATH=$PATH:/$BUILD_DIR/CMake/bin
+echo $(pwd)
+export PATH=$PATH:/$(pwd)/CMake/bin
 cd ..
 
 git clone https://github.com/lloyd/yajl.git
