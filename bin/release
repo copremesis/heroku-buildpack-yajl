@@ -1,0 +1,5 @@
+#!/bin/sh
+
+BUILD_DIR=$1
+export PATH=$PATH:/$BUILD_DIR/CMake/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/$BUILD_DIR/yajl/build/lib

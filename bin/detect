@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "YAJL"
+exit 0
