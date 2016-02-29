@@ -6,16 +6,16 @@ CACHE_DIR=$2
 
 git clone https://github.com/Kitware/CMake.git
 cd CMake && ./configure && make
-echo '*.*******'
-sleep 10
 echo $(pwd)
 export PATH=$PATH:/$(pwd)/bin
+echo $PATH
 sleep 10
-echo '*.*******'
 echo $PATH
 cd ..
 
 git clone https://github.com/lloyd/yajl.git
 cd yajl && ./configure && make
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/$(pwd)/build/lib
+echo $LD_LIBRARY_PATH
+sleep 10
 cd ..
