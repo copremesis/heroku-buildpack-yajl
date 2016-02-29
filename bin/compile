@@ -5,11 +5,11 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 
 git clone https://github.com/Kitware/CMake.git
-cd $BUILD_DIR/CMake && ./configure && make
+cd CMake && ./configure && make
 #export PATH=$PATH:/$BUILD_DIR/CMake/bin
-#cd ..
+cd ..
 
 git clone https://github.com/lloyd/yajl.git
-cd $BUILD_DIR/yajl && ./configure && make
+cd yajl && ./configure && make
 #export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/$BUILD_DIR/yajl/build/lib
-#cd ..
+cd ..
