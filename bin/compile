@@ -5,15 +5,39 @@ CACHE_DIR=$2
 ENV_DIR=$3
 
 # CMake
+
+echo "\tInstalling CMake"
+
 cd /tmp
-curl https://cmake.org/files/v3.5/cmake-3.5.0-rc3.tar.gz -s -O
+curl https://cmake.org/files/v3.5/cmake-3.5.0-rc3.tar.gz -O
 tar -xf cmake-3.5.0-rc3.tar.gz
 cd cmake-3.5.0-rc3
 ./configure --prefix=$BUILD_DIR && make && make install
 
 # YAJL
+
 cd /tmp
 curl https://codeload.github.com/lloyd/yajl/legacy.tar.gz/2.1.0 -s -o yajl-2.1.0.tar.gz
 tar -xf yajl-2.1.0.tar.gz
 cd lloyd-yajl-66cb08c
 ./configure -p $BUILD_PATH && make && make install
+
+# cd $BUILD_DIR
+#
+#
+# git clone https://github.com/Kitware/CMake.git
+# cd CMake && ./configure && make
+# echo $(pwd)
+# export PATH=$PATH:$(pwd)/bin
+# echo $PATH
+# sleep 10
+# echo $PATH
+# cd ..
+#
+# git clone https://github.com/lloyd/yajl.git
+# cd yajl && ./configure && make
+# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(pwd)/build/lib
+# echo $LD_LIBRARY_PATH
+# echo 'add this to your LD_PATH'
+# sleep 60
+# cd ..
