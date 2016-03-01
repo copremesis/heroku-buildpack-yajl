@@ -9,7 +9,7 @@ ENV_DIR=$3
 
 echo $PATH
 
-export PATH=$PATH:$BUILD_PATH
+export PATH=$PATH:$BUILD_PATH/bin
 
 # CMake
 echo "-----> Installing CMake"
