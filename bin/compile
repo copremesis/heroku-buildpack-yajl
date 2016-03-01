@@ -9,29 +9,20 @@ ENV_DIR=$3
 
 # CMake
 echo "-----> Installing CMake"
+cd /tmp
 curl --retry 3 --silent --location https://cmake.org/files/v3.5/cmake-3.5.0-rc3.tar.gz -o cmake-3.5.0-rc3.tar.gz
 tar -xf cmake-3.5.0-rc3.tar.gz
 cd cmake-3.5.0-rc3
 ./configure --prefix=$BUILD_DIR && make && make install
 
-#
-#
-# echo "\tInstalling CMake"
-#
-# cd /tmp
-# curl
-# tar -xf cmake-3.5.0-rc3.tar.gz
-# cd cmake-3.5.0-rc3
-# ./configure --prefix=$BUILD_DIR && make && make install
-#
-# # YAJL
-#
-# cd /tmp
-# curl https://codeload.github.com/lloyd/yajl/legacy.tar.gz/2.1.0 -s -o yajl-2.1.0.tar.gz
-# tar -xf yajl-2.1.0.tar.gz
-# cd lloyd-yajl-66cb08c
-# ./configure -p $BUILD_PATH && make && make install
-#
+# YAJL
+echo "-----> Installing yajl"
+cd /tmp
+curl https://codeload.github.com/lloyd/yajl/legacy.tar.gz/2.1.0 -s -o yajl-2.1.0.tar.gz
+tar -xf yajl-2.1.0.tar.gz
+cd lloyd-yajl-66cb08c
+./configure -p $BUILD_PATH && make && make install
+
 # # cd $BUILD_DIR
 # #
 # #
