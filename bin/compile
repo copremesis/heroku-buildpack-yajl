@@ -9,7 +9,7 @@ ENV_DIR=$3
 
 echo $PATH
 
-export PATH=$PATH:$BUILD_PATH/bin
+export PATH=$PATH:$BUILD_DIR/bin
 
 # CMake
 echo "-----> Installing CMake"
@@ -27,8 +27,8 @@ cd /tmp
 curl https://codeload.github.com/lloyd/yajl/legacy.tar.gz/2.1.0 -s -o yajl-2.1.0.tar.gz
 tar -xf yajl-2.1.0.tar.gz
 cd lloyd-yajl-66cb08c
-echo $BUILD_PATH
-./configure -p "$BUILD_PATH" && make && make install
+echo $BUILD_DIR
+./configure -p $BUILD_DIR && make && make install
 
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$BUILD_DIR/lib"
 export LIBRARY_PATH="$LIBRARY_PATH:$BUILD_DIR/lib"
