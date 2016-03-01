@@ -7,6 +7,7 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 ENV_DIR=$3
 
+echo "CMake:"
 # CMake
 curl --retry 3 --silent --location https://cmake.org/files/v3.5/cmake-3.5.0-rc3.tar.gz > cmake-3.5.0-rc3.tar.gz
 tar -xf cmake-3.5.0-rc3.tar.gz
