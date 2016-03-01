@@ -19,6 +19,8 @@ tar -xf cmake-3.5.0-rc3.tar.gz
 cd cmake-3.5.0-rc3
 ./configure --prefix=$BUILD_DIR && make && make install
 
+echo $(which cmake)
+
 # YAJL
 echo "-----> Installing yajl"
 cd /tmp
@@ -27,6 +29,10 @@ tar -xf yajl-2.1.0.tar.gz
 cd lloyd-yajl-66cb08c
 ls -alh
 ./configure -p $BUILD_PATH && make && make install
+
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$BUILD_DIR/lib"
+export LIBRARY_PATH="$LIBRARY_PATH:$BUILD_DIR/lib"
+export C_INCLUDE_PATH="$C_INCLUDE_PATH:$BUILD_DIR/include"
 
 # # cd $BUILD_DIR
 # #

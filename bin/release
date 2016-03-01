@@ -3,5 +3,8 @@
 cat << EOF
 ---
 config_vars:
-  LD_LIBRARY_PATH: "/usr/local/bin:/usr/bin:/bin:app/yajl/lib"
+  PATH: /app/bin:/usr/local/bin:/usr/bin
+  LD_LIBRARY_PATH: /app/lib:/usr/local/lib:/usr/lib
+  LIBRARY_PATH: /app/lib:/usr/local/lib:/usr/lib
+  C_INCLUDE_PATH: /app/include:/usr/local/include:/usr/include
 EOF
