@@ -1,4 +1,4 @@
 #!/bin/sh
 
-echo "YAJL"
+echo "RUBY"
 exit 0
