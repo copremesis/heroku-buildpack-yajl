@@ -25,6 +25,7 @@ cd /tmp
 curl https://codeload.github.com/lloyd/yajl/legacy.tar.gz/2.1.0 -s -o yajl-2.1.0.tar.gz
 tar -xf yajl-2.1.0.tar.gz
 cd lloyd-yajl-66cb08c
+ls -alh
 ./configure -p $BUILD_PATH && make && make install
 
 # # cd $BUILD_DIR
